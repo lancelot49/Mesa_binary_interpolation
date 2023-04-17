@@ -1,0 +1,34 @@
+&binary_job
+
+   inlist_names(1) = 'inlist1' 
+   inlist_names(2) = 'inlist2'
+
+   evolve_both_stars = .false.
+
+/ ! end of binary_job namelist
+
+&binary_controls
+
+   mdot_scheme = "Kolb"
+         
+   m1 = 30d0  ! donor mass in Msun
+   m2 = 20d0 ! companion mass in Msun
+   initial_period_in_days = 1.9952623149688795d0
+
+   do_jdot_mb = .false.
+
+   fm = 0.01d0
+   fm_limit = 1d-1
+   fa = 0.01d0
+   fa_hard = 0.02d0
+   fr = 0.1d0
+   fj = 0.001d0
+   fj_hard = 0.01d0
+
+   !transfer efficiency controls
+   limit_retention_by_mdot_edd = .true.
+
+   max_tries_to_achieve = 20
+         
+/ ! end of binary_controls namelist
+
